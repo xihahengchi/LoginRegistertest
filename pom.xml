@@ -37,15 +37,9 @@
 	<!-- 新增依赖配置 -->
 	<dependency>
 		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-tomcat</artifactId>  
+		<artifactId>spring-boot-starter-tomcat</artifactId>
+		<scope>provided</scope>		
 	</dependency>
-	<dependency>
-		<groupId>org.apache.tomcat</groupId>
-		<artifactId>tomcat-servlet-api</artifactId>
-		<version>8.5.38</version>
-		<scope>provided</scope>
-	</dependency>
-
 
     <!-- 下面两个引入为了操作数据库 -->
     <dependency>
