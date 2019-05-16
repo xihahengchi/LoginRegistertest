@@ -34,7 +34,7 @@
     </dependency>
 	
 	
-	<!-- 新增依赖 -->
+	<!-- 新增依赖配置 -->
 	<dependency>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-tomcat</artifactId>  
