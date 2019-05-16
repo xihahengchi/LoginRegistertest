@@ -63,6 +63,13 @@
       <artifactId>fastjson</artifactId>
       <version>1.2.16</version>
     </dependency>
+	
+	<!--在用maven 编译，打包过程中回出现javax.servlet找不到的情况，所以需要在这里配置-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+        </dependency>
 
   </dependencies>
 
