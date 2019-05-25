@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 public class IndexController {
 
     @Autowired
-    private UserDao userDao;
+    private UserDao userDao ;
    
     private User user=new User();
     
@@ -72,7 +72,7 @@ public class IndexController {
     public String login(HttpServletRequest request,HttpSession session) {
         String username=request.getParameter("username");
         String password=request.getParameter("password");
-        user=userDao.findBynameAndPassword(username, password);
+        user=userDao.findByUsernameAndPassword(username, password);
         String str="";
        if(user!=null) {
             session.setAttribute("userLogin", user);
