@@ -58,7 +58,7 @@ public class IndexController {
         String password = request.getParameter("password");
         String password2 = request.getParameter("password2");
         if (password.equals(password2)){
-            UserEntity userEntity = new UserEntity();
+            //UserEntity userEntity = new UserEntity();
             userEntity.setUsername(username);
             userEntity.setPassword(password);
             userDao.save(userEntity);
