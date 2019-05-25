@@ -68,19 +68,19 @@ public class IndexController {
         }
     }
     
-//    @RequestMapping("/ulogin")
-//    public String login(HttpServletRequest request,HttpSession session) {
-//        String username=request.getParameter("username");
-//        String password=request.getParameter("password");
-//        user=userDao.findBynameAndPassword(username, password);
-//        String str="";
-//        if(user!=null) {
-//            session.setAttribute("userLogin", user);
-//            str="index";
-//        }else {
-//            str="login";
-//        }
-//        return str;
-//    }
+    @RequestMapping("/ulogin")
+    public String login(HttpServletRequest request,HttpSession session) {
+        String username=request.getParameter("username");
+        String password=request.getParameter("password");
+        user=userDao.findBynameAndPassword(username, password);
+        String str="";
+       if(user!=null) {
+            session.setAttribute("userLogin", user);
+            str="index";
+        }else {
+            str="login";
+        }
+        return str;
+    }
 
 }
