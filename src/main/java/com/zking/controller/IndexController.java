@@ -72,7 +72,7 @@ public class IndexController {
     public String login(HttpServletRequest request,HttpSession session) {
         String username=request.getParameter("username");
         String password=request.getParameter("password");
-        user=userDao.findByUsernameAndPassword(username, password);
+        user=userDao.findBynameAndPassword(username, password);
         String str="";
        if(user!=null) {
             session.setAttribute("userLogin", user);
