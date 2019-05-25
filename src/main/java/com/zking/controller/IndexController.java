@@ -22,7 +22,7 @@ public class IndexController {
     private UserDao userDao ;
    
     private User user=new User();
-    
+    private UserEntity userEntity=new UserEntity();
     
 
     //index页面
@@ -72,10 +72,10 @@ public class IndexController {
     public String login(HttpServletRequest request,HttpSession session) {
         String username=request.getParameter("username");
         String password=request.getParameter("password");
-        user=userDao.findBynameAndPassword(username, password);
+        userEntity=userDao.findByUsernameAndPassword(username, password);
         String str="";
-       if(user!=null) {
-            session.setAttribute("userLogin", user);
+       if(userEntity!=null) {
+            session.setAttribute("userLogin", userEntity);
             str="index";
         }else {
             str="login";
